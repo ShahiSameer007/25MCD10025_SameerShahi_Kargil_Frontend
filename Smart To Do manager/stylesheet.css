@@ -1,0 +1,10 @@
+.card.task {
+  border-left: 4px solid #ddd;
+}
+.card.task.high { border-left-color: #dc3545; }
+.card.task.medium { border-left-color: #ffc107; }
+.card.task.low { border-left-color: #28a745; }
+
+.high .badge-priority { background-color: #e60b21; }
+.medium .badge-priority { background-color: #ffff07; color: #000; }
+.low .badge-priority { background-color: #33a728; }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Smart To-Do Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <h1 class="text-center mb-4">Smart To-Do Manager</h1>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <form id="task-form">
+          <div class="row g-3">
+            <div class="col-md-5"><input type="text" class="form-control" id="task-input" placeholder="Task Name" required></div>
+            <div class="col-md-2"><select class="form-select" id="priority-select" required><option value="Low">Low</option><option value="Medium">Medium</option><option value="High">High</option></select></div>
+            <div class="col-md-3"><input type="date" class="form-control" id="deadline-input" required></div>
+            <div class="col-md-2"><button type="submit" class="btn btn-primary w-100">Add Task</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="btn-group">
+              <button class="btn btn-outline-secondary active" data-filter="all">All</button>
+              <button class="btn btn-outline-secondary" data-filter="completed">Completed</button>
+              <button class="btn btn-outline-secondary" data-filter="pending">Pending</button>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <select class="form-select" id="sort-select">
+              <option value="priority">Sort:Priority (High → Low)</option>
+              <option value="deadline">Sort:Deadline (Nearest First)</option>
+            </select>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div>Total: <strong id="total-count">0</strong> | Completed: <strong id="completed-count">0</strong> | Pending: <strong id="pending-count">0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul id="task-list" class="list-unstyled"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>   
